@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Employees</title>
+    </head>
+    <body>
+        <h1>Employee List</h1>
+
+        <table border="1">
+            {{#each employees}}
+                <tr>
+                    <td>{{this.emp_no}}</td>
+                    <td>{{this.first_name}}</td>
+                    <td>{{this.last_name}}</td>
+                    <td>{{this.gender}}</td>
+                </tr>
+            {{/each}}
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <form action="">
+                        <input type="hidden" value="{{prev_offset}}" name="offset">
+                        <button type="submit"> Prev </button>
+                    </form>
+                </td>
+                <td>
+                    <form action="">
+                        <input type="hidden" value="{{next_offset}}" name="offset">
+                        <button type="submit"> Next </button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

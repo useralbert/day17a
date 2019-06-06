@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cart</title>
+    </head>
+    <body>
+        <h1>Cart</h1>
+        <form method="POST" action="/cart">
+            <input type="hidden" name="name" value="{{name}}">
+            <input type="hidden" name="cart" value="{{cart}}">
+            Item:
+            <input type="text" name="toAdd" required>
+            <button type="submit">Add</button>
+        </form>
+
+        <h2>My Cart</h2>
+        <ul>
+            {{#each items}}
+                <li> {{this}} </li>
+            {{/each}}
+        </ul>
+        
+    </body>
+</html>
